@@ -1,7 +1,20 @@
 <?php
 // public/index.php
-require_once __DIR__ . '/../src/config/config.php';
-session_start();
+// 1. Activar errores para ver qué pasa
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+// 2. DETECTOR DE ENTORNO DINÁMICO PARA RUTAS
+// Intentamos la ruta estándar (subiendo un nivel desde public)
+$config_path = __DIR__ . '/../src/config/config.php';
+
+// Si no existe ahí (caso de Railway ejecutando desde /app), probamos la ruta directa
+if (!file_exists($config_path)) {
+    $config_path = __DIR__ . '/src/config/config.php';
+}
+
+require_once $config_path;
 
 
 //Event Listener Not Source Found
