@@ -1,0 +1,395 @@
+@property --color-inicio {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #6a4488;
+}
+
+@property --color-fin {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #000;
+}
+
+:root {
+    --main-color: #000;
+    --second-color: #fff;
+    --accent-color: #6b4488;
+    --ligth-color: #8a709d;
+    --accent-strong-color: #4D276A;
+    --accent-color-transparent: #6a4488a4;
+    --ligth-color-transparent: #8a709da4;
+    --accent-strong-color-transparent: #4D276Aa4;
+    --height-header: 160px;
+    --height-header-2: 80px;
+    --background-gradient: linear-gradient(90deg, var(--color-inicio) 0%, var(--color-fin) 80%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--accent-color);
+    background: var(--background-gradient);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.opa0 {
+    opacity: 0;
+}
+
+
+/*
+?----------------------
+Todo: Estilos del Header
+?----------------------
+*/
+
+.header {
+    height: var(--height-header);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background-color: transparent;
+    transition:
+        background-color 0.2s,
+        height 0.4s;
+    overflow: hidden;
+}
+
+.header .title-page {
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    grid-column: 1;
+    grid-row: 1;
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+.header .img-logo {
+    height: 50px;
+    object-fit: cover;
+    filter: invert(1);
+    grid-column: 1;
+    grid-row: 1;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.header .nav-item {
+    height: 100%;
+    width: auto;
+    display: grid;
+    place-items: center center;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.header .nav-item ul {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.header .nav-item li {
+    height: 100%;
+    display: grid;
+    place-items: center center;
+}
+
+.header .nav-item a {
+    height: auto;
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    display: grid;
+    place-items: center center;
+    text-align: center;
+    transition: background-color 0.15s ease-out;
+    padding: 10px;
+    border-radius: 1px;
+}
+
+.header .nav-item a.active {
+    font-weight: bold;
+}
+
+.header .nav-item a:hover {
+    background-color: #6b4488;
+}
+
+.header .button-menu-navegavion {
+    height: 30px;
+    width: 20px;
+    color: white;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.href-cursos,
+.href-canjear {
+    text-transform: uppercase;
+    height: 60px;
+    padding: 10px 30px;
+    background-color: #000;
+    color: white;
+    border: 1px solid var(--accent-color);
+    display: grid;
+    place-items: center center;
+    border-radius: 30px;
+    animation: fade-in 2s forwards;
+    font-weight: bold;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: background-color 0.19s ease-in-out;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+.href-cursos:hover,
+.href-canjear:hover {
+    background-color: white;
+    color: #000;
+    cursor: pointer;
+}
+
+.redes-sociales {
+    position: relative;
+    z-index: 1;
+}
+
+.redes-sociales ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    padding: 0;
+}
+
+.redes-sociales a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+
+.redes-sociales .icon {
+    height: 30px;
+    --width: 30px;
+    width: 30px;
+    background: url('../img/icons.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.redes-sociales a:hover .icon {
+    transform: scale(1.05);
+}
+
+.redes-sociales .icon-tk {
+    background-position: calc(-1 * var(--width) * 2) 0;
+}
+
+.redes-sociales .icon-i {
+    background-position: calc(-1 * var(--width) * 1) 0;
+}
+
+.redes-sociales .icon-yt {
+    background-position: calc(-1 * var(--width) * 4) 0;
+}
+
+.redes-sociales .icon-fb {
+    background-position: calc(-1 * var(--width) * 0) 0;
+}
+
+.redes-sociales .icon-pin {
+    background-position: calc(-1 * var(--width) * 3) 0;
+}
+
+
+
+/*
+?-----------------------
+Todo: Cart Preview
+?-----------------------
+*/
+
+dialog.cart-preview {
+    height: 100vh;
+    max-height: 100vh;
+    width: 250px;
+    border: none;
+    top: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 10px;
+    background-color: var(--accent-color);
+    border-radius: 3px;
+    margin-left: auto;
+    margin-right: 0;
+    transform: translateX(100%);
+    animation: fade-in 0.4s forwards, panning-to-left 0.2s forwards;
+}
+
+dialog .cart-header {
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 40px;
+    grid-template-rows: 1fr 20px;
+    color: white;
+    border-bottom: 1px solid #ccc;
+}
+
+dialog .title {
+    margin: 0;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+dialog .cart-header small {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+dialog::backdrop {
+    background-color: #1111114f;
+}
+
+
+dialog .close_dialog {
+    font-size: 2em;
+    color: #ccc;
+    background-color: transparent;
+    border: none;
+    grid-column: 2;
+    grid-row: 1 / 3;
+    display: grid;
+    place-items: start center;
+    padding: 0;
+}
+
+dialog .close_dialog:hover {
+    color: white;
+}
+
+dialog .cart-items {
+    height: calc(100% - 70px - 70px);
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+dialog .cart-footer {
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    height: 50px;
+}
+
+.href-cart {
+    text-transform: uppercase;
+    height: 40px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: white;
+    border: 1px solid var(--accent-color);
+    display: grid;
+    place-items: center center;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: background-color 0.19s ease-in-out;
+    text-decoration: none;
+}
+
+.href-cart:hover {
+    background-color: white;
+    color: black;
+
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes panning-to-right {
+    to {
+        transform: translateX(0) scale(1.3);
+    }
+}
+
+@keyframes panning-to-left {
+    to {
+        transform: translateX(0%);
+    }
+}
+
+
+.footer{
+    border-top: 1px solid #111;
+    height: 350px;
+    width: 100%;
+    background-color: var(--main-color);
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    color: #ccc;
+}
+
+.footer .img-logo{
+    filter: invert(1);
+    height: 80px;
+    margin: auto;
+}
+
+.footer .redes-sociales{
+    margin: auto;
+}
+
+.footer .redes-sociales .icon{
+    filter: grayscale(1);
+}
+
+.footer .politica{
+    display: flex;
+    gap: 5px;
+
+    margin: auto;
+    justify-content: center;
+}
+
+.footer .politica a{
+    color: #ddd;
+}
+
+.footer small{
+
+    margin: auto;
+}

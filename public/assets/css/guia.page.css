@@ -1,0 +1,138 @@
+.guide-main{
+        margin-top: var(--height-header);
+    height: 100%;
+}
+
+.guide-main .poster.main {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
+    place-items: center center;
+    background: transparent;
+    color: white;
+    padding: 0 50px;
+}
+
+.guia-inscripcion-section {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2c3e50;
+    background-color: #f4f7f6;
+    padding: 40px 20px;
+}
+
+.inscripcion-container {
+    max-width: 750px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.header-banner {
+    background-color: #1a365d;
+    color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.header-banner h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.header-banner p {
+    margin: 8px 0 0 0;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.notice-box {
+    background-color: #ebf8ff;
+    border-left: 4px solid #3182ce;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 0 8px 8px 0;
+}
+
+.notice-box p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #2b6cb0;
+}
+
+.step-item {
+    margin-bottom: 30px;
+}
+
+.step-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    height: 36px;
+    background-color: var(--accent-strong-color);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 50%;
+}
+
+.step-title {
+    padding-left: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.step-body {
+    padding-left: 51px;
+}
+
+.step-detail {
+    margin: 8px 0;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.badge-action {
+    display: inline-block;
+    background-color: #edf2f7;
+    color: #4a5568;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.badge-next {
+    display: inline-block;
+    background-color: #e6fffa;
+    color: #234e52;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+code a {
+    background-color: #f7fafc;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    color: #e53e3e;
+}

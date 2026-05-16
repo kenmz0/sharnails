@@ -1,0 +1,314 @@
+.home-main {
+    margin-top: var(--height-header);
+    height: auto;
+}
+
+.poster {
+    position: relative;
+    height: calc(100vh - var(--height-header-2));
+    width: 100%;
+    display: grid;
+    grid-template-rows: 3fr 1fr 1fr;
+    place-items: center center;
+    background: transparent;
+}
+
+.poster.main {
+    height: calc(100vh - var(--height-header));
+}
+
+
+.poster .background-item {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    filter: opacity(0.3);
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.poster .background-item img {
+    opacity: 1;
+    position: absolute;
+}
+
+.poster .background-item img:nth-of-type(1) {
+    height: 60%;
+    left: 0;
+    top: 45%;
+    transform: translateX(-100%) scale(1.3);
+    animation: fade-in 1s forwards, panning-to-right 1s forwards;
+}
+
+.poster .background-item img:nth-of-type(2) {
+    height: 50%;
+    right: 0;
+    top: 50%;
+    transform: translateX(100%);
+    animation: fade-in 1s forwards, panning-to-left 1s forwards;
+}
+
+.poster .background-item .mask {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    position: absolute;
+    background-color: #ffffff27;
+    pointer-events: none;
+}
+
+.poster .img-logo {
+    margin: auto;
+    filter: invert(0.9);
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+}
+
+@starting-style {
+    .poster .img-logo {
+        opacity: 0;
+    }
+
+}
+
+
+.href-cursos {
+    text-transform: uppercase;
+    height: 60px;
+    padding: 10px 30px;
+    background-color: #000;
+    color: white;
+    border: 1px solid var(--accent-color);
+    display: grid;
+    place-items: center center;
+    border-radius: 30px;
+    animation: fade-in 2s forwards;
+    font-weight: bold;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: background-color 0.19s ease-in-out;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+.href-cursos:hover {
+    background-color: white;
+    color: #000;
+    cursor: pointer;
+}
+
+.redes-sociales {
+    position: relative;
+    z-index: 1;
+}
+
+.redes-sociales ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    padding: 0;
+}
+
+.redes-sociales a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+.redes-sociales .icon {
+    height: 30px;
+    --width: 30px;
+    width: 30px;
+    background: url('../img/icons.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.redes-sociales a:hover .icon {
+    transform: scale(1.05);
+}
+
+.redes-sociales .icon-tk {
+    background-position: calc(-1 * var(--width) * 2) 0;
+}
+
+.redes-sociales .icon-i {
+    background-position: calc(-1 * var(--width) * 1) 0;
+}
+
+.redes-sociales .icon-yt {
+    background-position: calc(-1 * var(--width) * 4) 0;
+}
+
+.redes-sociales .icon-fb {
+    background-position: calc(-1 * var(--width) * 0) 0;
+}
+
+.redes-sociales .icon-pin {
+    background-position: calc(-1 * var(--width) * 3) 0;
+}
+
+
+.poster.formacion {
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
+    padding: 30px;
+}
+
+.poster.formacion .image,
+.poster.formacion .informacion {
+    padding: 40px;
+    background-color: #f9f9f9;
+    height: 100%;
+    width: 100%;
+}
+
+.poster.formacion .image {
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: centers;
+}
+
+.poster.formacion .informacion {
+    border-radius: 0 10px 10px 0;
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.poster.formacion .informacion p {
+    line-height: 30px;
+}
+
+.poster.formacion .informacion ul {
+    list-style: none;
+}
+
+.poster.formacion .informacion li {
+    height: 30px;
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+    align-items: center;
+}
+
+.list-style-star {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    color: white;
+    display: grid;
+    place-items: center center;
+    font-size: 12px;
+}
+
+.list-style-star::after {
+    content: '★';
+}
+
+.poster.formacion .image img {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: -3px 3px 5px var(--accent-strong-color);
+    background-color: #000;
+    height: 100%;
+}
+
+.poster.acerca {
+    background-color: var(--accent-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
+    padding: 30px;
+}
+
+.poster.acerca .image img {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px var(--accent-strong-color);
+    background-color: #000;
+    height: 100%;
+}
+
+.poster.acerca .image,
+.poster.acerca .informacion {
+    padding: 40px;
+    background-color: var(--ligth-color-transparent);
+    height: 100%;
+    width: 100%;
+}
+
+.poster.acerca .image {
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.poster.acerca .informacion {
+    border-radius: 10px 0 0 10px;
+    text-align: end;
+    font-size: 1.5em;
+    color: white;
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.poster.acerca .informacion p {
+    line-height: 30px;
+}
+
+
+.poster.curso-reciente{
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 100px;
+}
+
+.poster.curso-reciente h2{
+    color: white;
+    font-size: 3em;
+    margin: 0;
+    height: 100%;
+}
+
+.poster.curso-reciente h2,
+.poster.curso-reciente .image,
+.poster.curso-reciente .informacion {
+    padding: 40px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.poster.curso-reciente .image {
+    height: 100%;
+}
+
+.poster.curso-reciente .image img {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px var(--accent-strong-color);
+    background-color: #000;
+    height: 100%;
+}
