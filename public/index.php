@@ -4,24 +4,6 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-echo "<h1>🔍 DIAGNÓSTICO DE CARPETAS EN RAILWAY</h1>";
-echo "<strong>Ruta actual (__DIR__):</strong> " . __DIR__ . "<br><br>";
-
-// Listar los archivos en la raíz /app
-echo "<strong>Archivos en la raíz (/app):</strong><br>";
-if (is_dir('/app')) {
-    echo "<pre>" . print_r(scandir('/app'), true) . "</pre>";
-}
-
-// Intentar listar los archivos dentro de /app/src si es que existe
-echo "<strong>Archivos en /app/src (si existe):</strong><br>";
-if (is_dir('/app/src')) {
-    echo "<pre>" . print_r(scandir('/app/src'), true) . "</pre>";
-} else {
-    echo "❌ La carpeta /app/src NO EXISTE en el servidor.<br>";
-}
-
-die("<br>--- FIN DEL DIAGNÓSTICO ---");
 
 // 2. DETECTOR DE ENTORNO DINÁMICO PARA RUTAS
 // Intentamos la ruta estándar (subiendo un nivel desde public)

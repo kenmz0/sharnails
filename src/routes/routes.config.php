@@ -1,5 +1,5 @@
 <?php
-require_once '../src/middleware/auth.php';
+require_once BASE_DIR . 'src/middleware/auth.php';
 // Definición de rutas
 $router->get('/', function () {
     //AuthMiddleware::check();//!no aqui en el home
