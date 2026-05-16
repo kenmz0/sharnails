@@ -17,34 +17,34 @@ class Router
     }
 
     // Ejecuta la ruta solicitada
-   public function dispatch($uri, $method)
-{
-    $path = parse_url($uri, PHP_URL_PATH);
-    
-    $callback = $this->routes[$method][$path] ?? null;
+    public function dispatch($uri, $method)
+    {
+        $path = parse_url($uri, PHP_URL_PATH);
 
-    if (!$callback) {
-        error_log("Ruta no encontrada: " . $path);
-        http_response_code(404);
-        echo "404 - Página no encontrada";
-        return;
-    }
+        $callback = $this->routes[$method][$path] ?? null;
 
-    if (is_callable($callback)) {
-        return $callback();
-    }
+        if (!$callback) {
+            error_log("Ruta no encontrada: " . $path);
+            http_response_code(404);
+            echo "404 - Página no encontrada";
+            return;
+        }
 
-    if (is_string($callback)) {
-        return $this->callAction($callback);
+        if (is_callable($callback)) {
+            return $callback();
+        }
+
+        if (is_string($callback)) {
+            return $this->callAction($callback);
+        }
     }
-}
 
     protected function callAction($handler)
     {
         // Separamos el Controlador del Método (ej: 'UserController@index')
         list($route, $method) = explode('@', $handler);
 
-        require_once "../src/controllers/{$route}.php";
+        require_once SRC_PATH . "controllers/{$route}.php";
 
         $routeInstance = new $route();
         $routeInstance->$method();

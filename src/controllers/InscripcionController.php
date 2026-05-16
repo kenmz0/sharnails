@@ -11,7 +11,7 @@ class InscripcionController
             "style.css",
             "canjear.page.css"
         ];
-        require_once '../src/views/pages/canjear.page.php';
+        require_once VIEWS_PATH . 'pages/canjear.page.php';
     }
 
     public function guide(){
@@ -21,7 +21,7 @@ class InscripcionController
             "style.css",
             "guia.page.css"
         ];
-        require_once '../src/views/pages/guia.page.php';
+        require_once VIEWS_PATH . 'pages/guia.page.php';
     }
 
     public function registrarInscripcion()

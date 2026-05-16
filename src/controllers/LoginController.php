@@ -10,7 +10,7 @@ class LoginController
             "style.css",
             "login.page.css"
         ];
-        require_once '../src/views/pages/login.page.php';
+        require_once VIEWS_PATH . 'pages/login.page.php';
     }
 }
 

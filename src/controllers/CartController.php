@@ -7,7 +7,7 @@ class CartController
     {
         $title_window = "Cart | Sharnails";
         $title_page = "Carrito";
-        require_once '../src/views/pages/cursos.page.php';
+        require_once VIEWS_PATH . 'pages/cursos.page.php';
     }
 
     public function add()

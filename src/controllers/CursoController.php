@@ -11,7 +11,7 @@ class CursoController
             "style.css",
             "cursos.page.css"
         ];
-        require_once '../src/views/pages/cursos.page.php';
+        require_once VIEWS_PATH . 'pages/cursos.page.php';
     }
 
     public function softGel(){
@@ -30,7 +30,7 @@ class CursoController
             "/assets/img/cursos/softgel.img.3.webp",
             "/assets/img/cursos/softgel.img.4.webp",
         ];
-        require_once '../src/views/pages/cursos/softgel.curso.page.php';
+        require_once VIEWS_PATH . 'pages/cursos/softgel.curso.page.php';
 
     }
 

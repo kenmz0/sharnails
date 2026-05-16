@@ -11,7 +11,7 @@ class AboutController
             "style.css",
             "about.page.css"
         ];
-        require_once '../src/views/pages/about.page.php';
+        require_once VIEWS_PATH . 'pages/about.page.php';
     }
 }
 

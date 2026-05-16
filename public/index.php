@@ -1,15 +1,15 @@
 <?php
 // public/index.php
-require_once __DIR__ . '../src/config/config.php';
+require_once __DIR__ . '/../src/config/config.php';
 session_start();
 
 
 //Event Listener Not Source Found
 spl_autoload_register(function ($class_name) {
     $directories = [
-        '../src/routes/',
-        '../src/controllers/',
-        '../src/middleware/',
+        BASE_DIR . 'src/routes/',
+        BASE_DIR . 'src/controllers/',
+        BASE_DIR . 'src/middleware/',
     ];
 
     foreach ($directories as $directory) {
@@ -21,9 +21,9 @@ spl_autoload_register(function ($class_name) {
     }
 });
 
-require_once __DIR__ . '../src/core/router.php';
+require_once BASE_DIR . 'src/core/router.php';
 $router = new Router();
-require_once __DIR__ . '../src/routes/routes.config.php';
+require_once BASE_DIR . 'src/routes/routes.config.php';
 // Despachar la ruta actual
 $router->dispatch($_SERVER['REQUEST_URI'], $_SERVER['REQUEST_METHOD']);
 

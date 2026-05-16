@@ -11,7 +11,7 @@ class HomeController
             "style.css",
             "home.page.css"
         ];
-        require_once '../src/views/pages/home.page.php';
+        require_once VIEWS_PATH . 'pages/home.page.php';
     }
 }
 
