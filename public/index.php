@@ -1,6 +1,6 @@
 <?php
 // public/index.php
-require_once '../src/config/config.php';
+require_once __DIR__ . '../src/config/config.php';
 session_start();
 
 
@@ -21,9 +21,9 @@ spl_autoload_register(function ($class_name) {
     }
 });
 
-require_once '../src/core/router.php';
+require_once __DIR__ . '../src/core/router.php';
 $router = new Router();
-require_once '../src/routes/routes.config.php';
+require_once __DIR__ . '../src/routes/routes.config.php';
 // Despachar la ruta actual
 $router->dispatch($_SERVER['REQUEST_URI'], $_SERVER['REQUEST_METHOD']);
 
