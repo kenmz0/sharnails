@@ -14,8 +14,8 @@ require_once VIEWS_PATH . 'partials/head.php';
 <body style="height: unset;">
     <?php require_once VIEWS_PATH . 'partials/header.php' ?>
     <?php require_once VIEWS_PATH . 'partials/dialog.form.acceso.php' ?>
-    <script src="/assets/scripts/imagen.curso.js"></script>
-    <script src="/assets/scripts/form.inscripcion.js"></script>
+    <script src="/public/assets/scripts/imagen.curso.js"></script>
+    <script src="/public/assets/scripts/form.inscripcion.js"></script>
 
     <main class="curso-softgel">
         <section class="poster main">

@@ -29,7 +29,7 @@ require_once VIEWS_PATH . 'partials/head.php';
             <li>
                 <articule class="curso-card">
                     <div class="portada">
-                        <img src="assets/img/cursos/softgel.portada.webp" alt="Cartel Portada de Cursolo SoftGel">
+                        <img src="/public/assets/img/cursos/softgel.portada.webp" alt="Cartel Portada de Cursolo SoftGel">
                     </div>
                     <div class="precio">
                         <h2 class="title-curso">Soft Gel</h2>
@@ -45,7 +45,7 @@ require_once VIEWS_PATH . 'partials/head.php';
             <li>
                 <articule class="curso-card">
                     <div class="portada">
-                        <img src="assets/img/cursos/softgel.portada.webp" alt="Cartel Portada de Cursolo SoftGel">
+                        <img src="/public/assets/img/cursos/softgel.portada.webp" alt="Cartel Portada de Cursolo SoftGel">
                     </div>
                     <div class="precio">
                         <h2 class="title-curso">Soft Gel</h2>
@@ -61,7 +61,7 @@ require_once VIEWS_PATH . 'partials/head.php';
             <li>
                 <articule class="curso-card">
                     <div class="portada">
-                        <img src="assets/img/cursos/softgel.portada.webp" alt="Cartel Portada de Cursolo SoftGel">
+                        <img src="/public/assets/img/cursos/softgel.portada.webp" alt="Cartel Portada de Cursolo SoftGel">
                     </div>
                     <div class="precio">
                         <h2 class="title-curso">Soft Gel</h2>
@@ -77,7 +77,7 @@ require_once VIEWS_PATH . 'partials/head.php';
             <li>
                 <articule class="curso-card">
                     <div class="portada">
-                        <img src="assets/img/cursos/softgel.portada.webp" alt="Cartel Portada de Cursolo SoftGel">
+                        <img src="/public/assets/img/cursos/softgel.portada.webp" alt="Cartel Portada de Cursolo SoftGel">
                     </div>
                     <div class="precio">
                         <h2 class="title-curso">Soft Gel</h2>

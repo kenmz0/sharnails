@@ -9,11 +9,11 @@ require_once VIEWS_PATH . 'partials/head.php';
     <main class="home-main">
         <section class="poster main">
             <div class="background-item">
-                <img src="assets/img/home-page-nail.webp" alt="uñas nails acrilicas">
-                <img src="assets/img/home-page-nail-2.webp" alt="uñas nails acrilicas">
+                <img src="/public/assets/img/home-page-nail.webp" alt="uñas nails acrilicas">
+                <img src="/public/assets/img/home-page-nail-2.webp" alt="uñas nails acrilicas">
                 <!--  <div class="mask"></div> -->
             </div>
-            <img class="img-logo" src="assets/img/logo_plain.webp" alt="Logo Sharnails">
+            <img class="img-logo" src="/public/assets/img/logo_plain.webp" alt="Logo Sharnails">
             <a class="href-cursos" href="/cursos">VER CURSOS</a>
             <div class="redes-sociales">
                 <ul>
@@ -52,7 +52,7 @@ require_once VIEWS_PATH . 'partials/head.php';
         </section>
         <section class="poster formacion">
             <div class="image">
-                <img loading="lazy" src="/assets/img/cursos/softgel.img.1.webp" alt="Curso nails experimentado">
+                <img loading="lazy" src="/public/assets/img/cursos/softgel.img.1.webp" alt="Curso nails experimentado">
             </div>
             <div class="informacion">
                 <h2>Formación Comprobada</h2>
@@ -96,13 +96,13 @@ require_once VIEWS_PATH . 'partials/head.php';
                 <a class="href-cursos" href="/cursos">VER CURSOS</a>
             </div>
             <div class="image">
-                <img loading="lazy" src="/assets/img/cursos/softgel.img.1.webp" alt="Curso nails experimentado">
+                <img loading="lazy" src="/public/assets/img/cursos/softgel.img.1.webp" alt="Curso nails experimentado">
             </div>
         </section>
         <section class="poster curso-reciente">
             <h2>Mantente Actualizada</h2>
             <div class="image">
-                <img loading="lazy" src="/assets/img/cursos/softgel.img.1.webp" alt="Curso nails experimentado">
+                <img loading="lazy" src="/public/assets/img/cursos/softgel.img.1.webp" alt="Curso nails experimentado">
             </div>
             <div class="informacion">
                 <a class="href-cursos invert" href="/cursos/soft-gel">Visitar CURSO</a>

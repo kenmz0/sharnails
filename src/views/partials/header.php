@@ -9,7 +9,7 @@ $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 <header class="header">
     <h1 class="title-page"><?php echo $title_page ?></h1>
-    <img class="img-logo" src="/assets/img/logo_plain.webp" alt="Logo Sharnails">
+    <img class="img-logo" src="/public/assets/img/logo_plain.webp" alt="Logo Sharnails">
     <button class="button-menu-navegavion" style="display: none;">
         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
             viewBox="0 0 448 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
@@ -38,4 +38,4 @@ $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
         </ul>
     </nav>
 </header>
-<script src="/assets/scripts/header.effect.js"></script>
+<script src="/public/assets/scripts/header.effect.js"></script>

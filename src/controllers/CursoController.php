@@ -24,11 +24,11 @@ class CursoController
             "guia.page.css"
         ];
         $imagenes = [
-            "/assets/img/cursos/softgel.portada.webp",
-            "/assets/img/cursos/softgel.img.1.webp",
-            "/assets/img/cursos/softgel.img.2.webp",
-            "/assets/img/cursos/softgel.img.3.webp",
-            "/assets/img/cursos/softgel.img.4.webp",
+            "/public/assets/img/cursos/softgel.portada.webp",
+            "/public/assets/img/cursos/softgel.img.1.webp",
+            "/public/assets/img/cursos/softgel.img.2.webp",
+            "/public/assets/img/cursos/softgel.img.3.webp",
+            "/public/assets/img/cursos/softgel.img.4.webp",
         ];
         require_once VIEWS_PATH . 'pages/cursos/softgel.curso.page.php';
 

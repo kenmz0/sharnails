@@ -5,16 +5,8 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 
-// 2. DETECTOR DE ENTORNO DINÁMICO PARA RUTAS
-// Intentamos la ruta estándar (subiendo un nivel desde public)
-$config_path = __DIR__ . '/../src/config/config.php';
 
-// Si no existe ahí (caso de Railway ejecutando desde /app), probamos la ruta directa
-if (!file_exists($config_path)) {
-    $config_path = __DIR__ . '/src/config/config.php';
-}
-
-require_once $config_path;
+require_once 'src/config/config.php';
 
 
 //Event Listener Not Source Found
