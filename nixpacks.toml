@@ -1,5 +1,0 @@
-[variables]
-    NIXPACKS_PHP_ROOT_DIR = "public"
-
-[start]
-    cmd = "frankenphp run --config /etc/caddy/Caddyfile --global-option 'local_certs' --adapter caddyfile --container --public-dir public"
