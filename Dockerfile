@@ -1,16 +1,19 @@
 FROM php:8.4-apache
 
+# Instalar PostgreSQL driver
 RUN apt-get update && apt-get install -y libpq-dev \
     && docker-php-ext-install pdo pdo_pgsql pgsql
 
-# Desactivar otros MPMs (clave)
-RUN a2dismod mpm_event mpm_worker || true
-
-# Activar solo uno (prefork es el más seguro para PHP)
-RUN a2enmod mpm_prefork
-
+# Activar rewrite
 RUN a2enmod rewrite
 
+# CRÍTICO: desactivar TODOS los MPMs primero
+RUN rm -f /etc/apache2/mods-enabled/mpm_*
+
+# activar SOLO prefork
+RUN a2enmod mpm_prefork
+
+# Configurar Apache para usar /public
 ENV APACHE_DOCUMENT_ROOT /var/www/html/public
 
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf \
