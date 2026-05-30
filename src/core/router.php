@@ -21,33 +21,40 @@ class Router
     {
         $path = parse_url($uri, PHP_URL_PATH);
 
-        $callback = $this->routes[$method][$path] ?? null;
-
-        if (!$callback) {
-            error_log("Ruta no encontrada: " . $path);
-            http_response_code(404);
-            echo "404 - Página no encontrada";
-            return;
+        if (isset($this->routes[$method][$path])) {
+            $callback = $this->routes[$method][$path];
+            return $this->callAction($callback);
         }
 
+        if (isset($this->routes[$method])) {
+            foreach ($this->routes[$method] as $route => $callback) {
+                $pattern = preg_replace('/\{[a-zA-Z0-9_]+\}/', '([^/]+)', $route);
+                $pattern = '#^' . $pattern . '$#';
+                if (preg_match($pattern, $path, $matches)) {
+                    array_shift($matches);
+                    return $this->callAction($callback, $matches);
+                }
+            }
+        }
+
+        error_log("Ruta no encontrada: " . $path);
+        http_response_code(404);
+        echo "404 - Página no encontrada";
+        return;
+    }
+
+    protected function callAction($callback, $params = [])
+    {
         if (is_callable($callback)) {
-            return $callback();
+            return call_user_func_array($callback, $params);
         }
 
         if (is_string($callback)) {
-            return $this->callAction($callback);
+            list($route, $method) = explode('@', $callback);
+            require_once SRC_PATH . "controllers/{$route}.php";
+            $routeInstance = new $route();
+            return call_user_func_array([$routeInstance, $method], $params);
         }
-    }
-
-    protected function callAction($handler)
-    {
-        // Separamos el Controlador del Método (ej: 'UserController@index')
-        list($route, $method) = explode('@', $handler);
-
-        require_once SRC_PATH . "controllers/{$route}.php";
-
-        $routeInstance = new $route();
-        $routeInstance->$method();
     }
 }
 

@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
 <?php
 require_once VIEWS_PATH . 'partials/head.php';
 ?>

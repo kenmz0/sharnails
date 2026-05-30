@@ -1,0 +1,168 @@
+.register-main{
+    margin-top: var(--height-header);
+    height: calc(100% - var(--height-header));
+    padding: 20px;
+    font-family: var(--font-text);
+}
+
+.register-container {
+    margin: auto;
+    width: 100%;
+    max-width: 500px;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #fafafa;
+}
+
+.register-main h2 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+}
+
+.register-main p.subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    margin: 1rem auto;
+}
+
+/* Grid para Nombres y Apellidos */
+.register-main .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.register-main .form-group {
+    margin-bottom: 0.75rem;
+}
+
+.register-main label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #444;
+}
+
+.register-main input {
+    width: 100%;
+    padding: 0.8rem;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.register-main input:focus {
+    outline: none;
+    border-color: #6b4488;
+    box-shadow: 0 0 0 3px rgba(107, 68, 136, 0.1);
+}
+
+.register-main input::placeholder {
+    color: #bbb;
+}
+
+.register-main small {
+    display: block;
+    margin-top: 0.3rem;
+    color: #888;
+    font-size: 0.75rem;
+}
+
+/* Botón */
+.register-main button {
+    width: 100%;
+    padding: 0.9rem;
+    background-color: #6b4488;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+}
+
+.register-main button:hover {
+    background-color: #56366e;
+}
+
+/* Footer */
+.register-main .login-footer {
+    margin-top: 1.5rem;
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.register-main a {
+    color: #6b4488;
+    font-weight: 600;
+}
+
+.register-main a:hover {
+    text-decoration: underline;
+}
+
+.input-error {
+    border-color: #e74c3c !important;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1) !important;
+}
+
+.error-container{
+    margin-top: 0.15rem;
+    padding: 0.25rem;
+    padding-left: 0.5rem;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 6px;
+    font-size: 0.75rem;
+}
+
+.error-container p{
+    margin: 0;
+}
+
+/* Responsive para el grid de nombres */
+@media (max-width: 480px) {
+    .register-main .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+
+@media only screen and (max-height: 400px) {
+    .register-main{
+        margin-top: var(--height-header-2);
+        height: auto;
+        padding: 1rem;
+    }
+    .login-main .container{
+        width: 90vw;
+        gap: 0px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .register-main{
+        margin-top: var(--height-header-2);
+        height: auto;
+        padding: 1rem;
+    }
+    .login-main .container{
+        width: 90vw;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        gap: 0px;
+    }
+}

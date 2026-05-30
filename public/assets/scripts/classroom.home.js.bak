@@ -1,0 +1,21 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const btn_titulos_bloque = document.querySelectorAll('.titulo-bloque');
+    btn_titulos_bloque.forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            const is_expanded = e.target.classList.toggle('expanded')
+        })
+
+    });
+
+    const btn_siguiente_recurso = document.getElementById('btn_siguiente_recurso');
+    const dialog_cambiar_recurso = document.getElementById('dialog_cambiar_recurso');
+    btn_siguiente_recurso.addEventListener("click", () => {
+        dialog_cambiar_recurso.style.display = "none";
+    });
+
+    const btn_reproducir = document.getElementById('btn_reproducir');
+    const dialog_reproducir = document.getElementById('dialog_reproducir');
+    btn_reproducir.addEventListener("click", () => {
+        dialog_reproducir.style.display = "none";
+    });
+})

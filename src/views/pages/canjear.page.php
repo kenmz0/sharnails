@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-<?php
+?php
 require_once VIEWS_PATH . 'partials/head.php';
 ?>
 
@@ -25,6 +23,7 @@ require_once VIEWS_PATH . 'partials/head.php';
             </div>
         </section>
     </main>
+        <?= require_once VIEWS_PATH . 'partials/loader.php' ?>
     <?php require_once VIEWS_PATH . 'partials/footer.php' ?>
 </body>
 

@@ -1,0 +1,61 @@
+@property --color-inicio {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #6a4488;
+}
+
+@property --color-fin {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #000;
+}
+
+:root {
+    --main-color: #000;
+    --second-color: #fff;
+    --accent-color: #6b4488;
+    --ligth-color: #8a709d;
+    --ligth-color-transparent: #8a709da4;
+    --dark-color: #1b1122;
+    --dark-color-transparent: #1b1122a4;
+    --accent-strong-color: #4D276A;
+    --accent-color-transparent: #6a4488a4;
+    --accent-strong-color-transparent: #4D276Aa4;
+    --height-header: 80px;
+    --background-gradient: linear-gradient(90deg, var(--color-inicio) 0%, var(--color-fin) 80%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--accent-color);
+    background: var(--background-gradient);
+    font-family: var(--font-text);
+    scroll-behavior: smooth;
+}
+
+
+.header {
+    height: var(--height-header-2);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 0px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background-color: var(--main-color) !important;
+    transition:
+        background-color 0.2s,
+        height 0.4s;
+}

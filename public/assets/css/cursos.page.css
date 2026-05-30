@@ -6,135 +6,110 @@ Todo: Curso
 
 .curso-main {
     margin-top: var(--height-header);
-    height: calc(100vh - var(--height-header));
-    padding: 0px 30px 30px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 40px 1fr;
-}
-
-.curso-main .curso-filtro {
-    display: flex;
-    gap: 10px;
-    padding: 10px;
-    height: 100%;
-    justify-content: start;
-    align-items: center;
-    border-bottom: 1px solid #ccc;
-}
-
-.curso-main .curso-filtro .group-filter select{
-    height: 35px;
-    width: 225px;
-    background-color: white;
-    color: #111;
-    padding: 4px;
-    font-size: 1.1em;
-    border: none;
-    border-radius: 5px;
-    border: 1px solid var(--accent-strong-color-transparent);
-    transition: background-color 0.2s;
-
+    height: auto;
+    padding: 2rem;
+    padding-top: 0px;
 }
 
 .curso-main .curso-lista {
     display: flex;
+    flex-direction: column;
     align-items: center;
     list-style: none;
     margin: 0;
-    gap: 20px;
-    padding: 30px;
+    gap: 4rem;
     overflow: auto;
     position: relative;
+    overflow-x: hidden;
+    padding: 0;
 }
 
-.curso-main .curso-lista .mask{
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100vw;
-    pointer-events: none;
-    background: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.846) 97%, #000 100%);
-    z-index: 100;
-}
 
-.curso-main .curso-lista li{
+.curso-main .curso-lista li {
     height: 100%;
 }
 
 .curso-main .curso-card {
     flex-shrink: 0;
-    height: 100%;
-    max-height: 350px;
-    min-width: 300px;
-    width: 300px;
-    border-radius: 2px;
-    box-shadow: 1px 1px 5px var(--accent-strong-color);
+    height: 400px;
+    width: 800px;
     display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    gap: 2rem;
     position: relative;
     overflow: hidden;
+    align-items: center;
+    padding: 1rem 0;
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: slide-to-final 1s forwards;
+    transition: border-bottom 0.4s;
+    box-sizing: content-box;
 }
 
-.curso-main .curso-card:hover.curso-card img {
+/* .curso-main .curso-card:hover.curso-card img {
     transform: scale(1.1);
 }
-
-.curso-main .curso-card:hover.curso-card .precio{
-    transform: translateY(-50px);
+ */
+.curso-main .curso-card:hover {
+    border-bottom: 2px solid var(--dark-color);
+    border-top: 2px solid var(--dark-color);
 }
 
+.curso-main .curso-card:hover .title-curso {
+    color: white;
+}
 
 .curso-main .curso-card .portada {
-    height: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
     width: 100%;
     overflow: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
     z-index: 1;
     display: flex;
+    align-items: center;
 }
 
 .curso-main .curso-card .portada img {
     height: auto;
     width: 100%;
-    display: block;
+
     object-position: bottom;
-    object-fit: cover;
+    object-fit: contain;
     transition: transform 0.2s;
 }
 
+.curso-card .informacion {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.curso-main .title-curso {
+    color: white;
+    font-size: 1.8rem;
+    margin: 0;
+    display: flex;
+    align-items: end;
+    font-family: var(--font-subtitle);
+}
+
+.curso-card .descripcion {
+    color: white;
+    font-size: 1rem;
+    line-height: 1.4rem;
+}
+
 .curso-main .precio {
-    position: absolute;
-    bottom: -50px;
-    left: 0;
-    height: 130px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr; 
+    display: flex;
+    justify-content: start;
+    align-items: end;
     gap: 5px;
     align-items: center;
     padding: 5px 10px;
-    z-index: 100;
-    background-color: #000000bd;
     transition: transform 0.3s;
-}
-
-.curso-main .precio .title-curso{
-    color: white;
-    font-size: 1.8em;
-    margin: 0;
-}
-
-.curso-main .precio-text {
-    display: flex;
-    height: 100%;
-    justify-content: start;
-    align-items: center;
-    gap: 15px;
-    line-height: 30px;
+    display: none;
 }
 
 .curso-main .precio-value {
@@ -163,6 +138,8 @@ Todo: Curso
 }
 
 .curso-main .href-cursos {
+    grid-row: 4;
+    width: 300px;
     background-color: var(--accent-color);
     color: white;
 }
@@ -172,6 +149,83 @@ Todo: Curso
     color: var(--accent-color);
 }
 
-.curso-main .more-info{
+.curso-main .more-info {
     height: unset;
+}
+
+/* ? Reglas Horizontal mas pequeña */
+
+@media only screen and (max-width: 400px) {
+    .curso-main {
+        margin-top: var(--height-header-2);
+        height: auto;
+        padding: 0rem;
+    }
+
+    .curso-main .curso-lista {
+        gap: 100px;
+    }
+
+    .curso-card {
+        height: calc(95vh - var(--height-header-2)) !important;
+        width: 90vw !important;
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto 1fr !important;
+        gap: 1rem !important;
+        padding: 0.75rem !important;
+    }
+
+    .curso-card .portada {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 4;
+        grid-row: 1;
+        overflow: hidden;
+        background-position: top;
+    }
+
+    .curso-card .portada img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 9 / 16;
+        object-fit: contain;
+    }
+
+    .curso-card .informacion {
+        height: 100% !important;
+        grid-template-rows: auto 1fr auto !important;
+        grid-row: 2;
+    }
+
+
+}
+
+
+@media only screen and (max-height: 400px) {
+    .curso-main {
+        margin-top: var(--height-header-2);
+        height: auto;
+        padding: 0rem;
+    }
+
+    .curso-main .curso-lista {
+        gap: 100px;
+    }
+
+    .curso-card {
+        height: calc(90vh - var(--height-header-2)) !important;
+        width: 90vw !important;
+        display: grid !important;
+        grid-template-columns: 1fr 2fr !important;
+        grid-template-rows: 1fr !important;
+        gap: 1rem !important;
+        padding: 0.75rem !important;
+    }
+
+    .curso-card .informacion {
+        height: 100% !important;
+        grid-template-rows: auto 1fr 30px !important;
+    }
+
 }

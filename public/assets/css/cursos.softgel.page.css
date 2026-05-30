@@ -1,43 +1,35 @@
-.poster {
-    position: relative;
-    height: calc(100vh - var(--height-header-2));
-    width: 100%;
-    display: grid;
-    grid-template-rows: 3fr 1fr 1fr;
-    place-items: center center;
-    background: transparent;
-}
-
-
-
 .curso-softgel .poster.main {
     margin-top: var(--height-header);
     position: relative;
-    height: calc(100vh - var(--height-header));
+    height: 100%;
     background: transparent;
-    padding: 40px 60px;
+    padding: 2rem 4rem;
     display: grid;
     gap: 20px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto 1fr;
     background-color: #fff;
     place-items: unset;
+    overflow-y: hidden;
 }
 
 .curso-softgel .portada {
+    height: auto;
     display: grid;
-    grid-template-columns: 1fr 120px;
-    grid-template-rows: 1fr;
-    gap: 5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 50px;
+    gap: 0.25rem;
     overflow: hidden;
     background-color: #fafafa;
-    border-radius: 5px;
-    padding: 10px;
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    grid-column: 1;
+    grid-row: 1 / 3;
 }
 
 .curso-softgel .portada .imagen-seleccionada {
-    height: 100%;
-    width: auto;
+    height: auto;
+    width: 100%;
     grid-column: 1;
     grid-row: 1;
     display: flex;
@@ -46,8 +38,9 @@
 }
 
 .curso-softgel .imagen-seleccionada img {
-    width: auto;
-    height: 100%;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
     object-fit: contain;
     overflow: hidden;
 }
@@ -58,24 +51,27 @@
     margin: 0;
     display: flex;
     justify-content: start;
-    flex-direction: column;
-    gap: 10px;
-    grid-column: 2;
-    grid-row: 1;
+    gap: 0.75rem;
+    grid-column: 1;
+    grid-row: 2;
     overflow: auto;
+    height: fit-content;
 }
 
 .curso-softgel .lista-imagenes .imagen-preview {
-    height: 100%;
+    height: auto;
     width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
 }
 
 .curso-softgel .lista-imagenes .imagen-preview img {
     border: 2px solid transparent;
-    height: 100px;
-    width: 100px;
-    object-fit: cover;
-    overflow: hidden;
+    height: auto;
+    width: 100%;
+    max-width: 80px;
+    object-fit: contain;
+    object-position: center;
     border-radius: 3px;
 }
 
@@ -89,19 +85,25 @@
 }
 
 .curso-softgel .informacion {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    align-items: start;
     gap: 5px;
+    grid-column: 2;
+    grid-row: 1;
 }
 
 .curso-softgel .title {
     margin-bottom: 0;
+    font-family: var(--font-subtitle);
 }
 
 .curso-softgel .precio-text {
     display: flex;
     justify-content: start;
-    height: 100%;
+    height:auto;
     align-items: center;
     gap: 15px;
     line-height: 30px;
@@ -134,6 +136,12 @@
     justify-content: space-between;
 }
 
+.curso-softgel .slide-r {
+    transform: translateX(100%);
+    opacity: 0;
+    animation: slide-to-final 1s forwards;
+}
+
 .curso-softgel .href-cursos:hover {
     background-color: white;
     color: var(--accent-color);
@@ -151,12 +159,14 @@
 }
 
 
-.curso-softgel .informacion .descripcion {
+.curso-softgel .descripcion {
     overflow-y: auto;
+    grid-column: 2;
+    grid-row: 2;
 }
 
 
-.curso-softgel .inscripcion{
+.curso-softgel .inscripcion {
     height: fit-content;
     background-color: var(--accent-color-transparent);
     display: grid;
@@ -166,7 +176,7 @@
     column-gap: 10px;
 }
 
-.curso-softgel .contexto{
+.curso-softgel .contexto {
     padding: 30px;
     font-size: 1em;
     height: 100%;
@@ -177,17 +187,17 @@
     color: white;
 }
 
-.curso-softgel .metodo-pago{
+.curso-softgel .metodo-pago {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
-.curso-softgel .formulario-inscripcion{
+.curso-softgel .formulario-inscripcion {
     height: 100%;
 }
 
-.curso-softgel .reclarmar-codigo{
+.curso-softgel .reclarmar-codigo {
     height: fit-content;
     padding: 50px;
     background-color: var(--accent-color);
@@ -197,3 +207,72 @@
     grid-template-rows: 1fr 1fr;
 }
 
+@media only screen and (max-width: 400px) {
+    .curso-softgel .poster.main {
+        margin-top: var(--height-header-2);
+        height: auto;
+        width: 100vw;
+        padding: 1rem;
+        grid-template-rows: 50vh 1fr auto;
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .curso-softgel .portada {
+        height: 100%;
+        grid-column: 1;
+        grid-row: 1;
+        padding: 0;
+    }
+
+
+    .curso-softgel .informacion{
+        justify-content: start;
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .curso-softgel .descripcion{
+        grid-column: 1;
+        grid-row: 3;
+    }
+}
+
+@media only screen and (max-height: 400px) {
+    .curso-softgel .poster.main {
+        margin-top: var(--height-header-2);
+        height: auto;
+        padding: 1rem;
+        grid-template-rows: calc(100vh - var(--height-header-2)) 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .curso-softgel .portada {
+        height: 80vh;
+        grid-template-columns: 50px 1fr;
+        grid-template-rows: 1fr;
+    }
+
+     .curso-softgel .portada .lista-imagenes{
+        grid-column: 1;
+        grid-row: 1;
+        flex-direction: column;
+    }
+
+     .curso-softgel .portada .imagen-seleccionada{
+        grid-column: 2;
+        grid-row: 1;
+        height: 100%;
+    }
+
+    .curso-softgel .informacion{
+        justify-content: start;
+    }
+
+    .curso-softgel .descripcion{
+        grid-column: 1 / 3;
+        grid-row: 2;
+    }
+
+    
+}

@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
 <?php
 require_once VIEWS_PATH . 'partials/head.php';
 ?>
@@ -78,12 +76,13 @@ require_once VIEWS_PATH . 'partials/head.php';
                 <div class="about-cta">
                     <h3>¿Listo para dar el siguiente paso?</h3>
                     <p>Únete a nuestra comunidad de alumnos hoy mismo.</p>
-                    <a href="/guia-inscripcion" class="cta-button">Ver Pasos de Inscripción</a>
+                    <a href="/guia-inscripcion" data-destino="Guia de Inscripción" class="cta-button">Ver Pasos de Inscripción</a>
                 </div>
         
             </div>
         </section>
     </section>
+    <?= require_once VIEWS_PATH . 'partials/loader.php' ?>
     <?php require_once VIEWS_PATH . 'partials/footer.php'; ?>
 </body>
 

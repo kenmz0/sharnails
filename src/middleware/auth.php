@@ -1,26 +1,17 @@
 <?php
-// src/middleware/auth.php
+
+require_once SRC_PATH . '/services/AuthServices.php';
 class AuthMiddleware {
-    
-    public static function check() {
-        $inactividad = 600; // 10 minutos
-        $now = time();
-
-        // 1. ¿Está logueado?
-        if (!isset($_SESSION['user_id'])) {
-            self::unauthorized("Debes iniciar sesión para acceder.");
+    private static ?AuthServices $authService = null;
+    private static function initAuth() {
+        if (self::$authService === null) {
+            self::$authService = new AuthServices();
         }
-
-        // 2. ¿Expiró por inactividad?
-        if (isset($_SESSION['last_activity']) && ($now - $_SESSION['last_activity'] > $inactividad)) {
-            self::terminateSession();
-            self::unauthorized("Sesión expirada por inactividad.");
-        }
-
-        // 3. Actualizar actividad
-        $_SESSION['last_activity'] = $now;
-        
-        // Si llega aquí, todo está OK. No hace nada y permite que el flujo siga.
+    }
+    public static function fastCheck() {
+        self::initAuth();
+        $session = self::$authService->fastValidationSession();
+        return $session;       
     }
 
     private static function unauthorized($message) {
@@ -36,7 +27,7 @@ class AuthMiddleware {
         }
 
         // Si es una navegación normal
-        header("Location: /login");
+        header("Location: /signin?error=" . urlencode($message));
         exit;
     }
 

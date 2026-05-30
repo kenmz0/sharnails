@@ -1,0 +1,301 @@
+.classroom.home{
+    height: auto;
+    padding: 2rem 4rem;
+}
+
+.container{
+    height: auto;
+    width: 100%;
+    background-color: #fef9ff;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.resume{
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px repeat(2, calc(100vh - var(--height-header) - 100px));
+    gap: 10px;
+}
+
+.resume *{
+    border-radius: 0.25rem;
+}
+
+.resume .continuar{
+    grid-column: 1 / 3;
+    grid-row: 1;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    gap: 20px;
+    justify-content: start;
+    align-items: center;
+    padding: 20px;
+    background-color: color-mix(in srgb, var(--ligth-color) 50%, transparent);
+}
+
+.continuar .nombre-bloque{
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.container .ver-recurso{
+    height: 2rem;
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 10px;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    color: white;
+    background-color: var(--accent-color);
+    transition: background-color 0.2s;
+}
+
+.container .ver-recurso:hover{
+    background-color: var(--accent-strong-color);
+}
+
+.resume .progreso{
+    grid-column: 3;
+    grid-row: 1;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 20px;
+    font-size: 0.65rem;
+    gap: 3px;
+    font-size: 0.8rem;
+}
+
+.resume .progreso .tiempo,
+.resume .progreso .porcentaje {
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    gap: 3px;
+}
+
+
+.resume .progreso .barra {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.661);
+    overflow: hidden;
+    border-radius: 2px;
+    display: flex;
+    justify-content: start;
+}
+
+.resume .progreso .barra .bar-progress {
+    height: 100%;
+    width: 0%;
+    background-color: var(--accent-color);
+}
+
+.resume .portada{
+    grid-column: 1;
+    grid-row: 2;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.resume .portada img{
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+}
+
+.resume .descripcion{
+    padding: 0px 0.25rem 0.75rem;
+    overflow-y: auto;
+    position: relative;
+}
+
+.resume .title-descripcion{
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 60px;
+    margin: 0;
+    display: flex;
+    justify-content: start;
+    padding-left: 10px;
+    align-items: center;
+    background-color: #fef9ff;
+}
+
+.resume .descripcion p{
+    margin: 0;
+}
+
+.resume .descripcion .lista-bloque{
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.resume .descripcion .titulo-bloque{
+    border: none;
+    border-bottom: 1px solid var(--accent-color);
+    width: auto;
+    padding: 3px 10px;
+    border-radius: 0px;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 50px;
+    gap: 10px;
+    align-items: center;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.resume .descripcion .titulo-bloque .arrow{
+    width: 100%;
+}
+
+.resume .descripcion .titulo-bloque.expanded{
+    background-color:var(--accent-color);
+    border-bottom-color: var(--dark-color);
+    color: white;
+}
+
+
+
+.resume .descripcion .titulo-bloque.expanded .arrow:after{
+    content: '⏶';
+    color: white;
+}
+
+.resume .descripcion .titulo-bloque:after{
+    content: '⏷';
+    color: black;
+}
+
+.resume .descripcion .bloque:has(.expanded) .items-bloque{
+    display: flex;
+    padding-top: 7px;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.9rem;
+}
+
+
+.resume .descripcion .items-bloque{
+    display: none;
+    
+}
+
+.resume .contenido .lista{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 1.3rem;
+}
+
+.resume .contenido .btn-download-recurso{
+    width: auto;
+    height: 30px;
+    display: grid;
+    grid-template-columns: 1fr 30px;
+    gap: 10px;
+    padding: 5px 0px;
+    background-color: var(--accent-color);
+    border: none;
+    align-items: center;
+    color: white;
+    transition: background-color 0.2s, border 0.2s;
+}
+
+
+.resume .contenido .btn-download-recurso:hover{
+    color: var(--accent-color);
+    background-color: white;
+    border: 1px solid var(--dark-color);
+}
+
+.resume .contenido .btn-download-recurso span{
+    padding-left: 10px;
+}
+
+.resume .contenido .btn-download-recurso .icon{
+    display: flex;
+    justify-content: center;
+    border-left: 1px solid var(--dark-color);
+    border-radius: 0;
+}
+
+
+.resume .reproductor-container{
+    grid-column: 1 / 4;
+    grid-row: 3;
+    height: 100%;
+    width: 100%;
+    background-color: var(--dark-color-transparent);
+    position: relative;
+    scroll-margin-top: calc(var(--height-header) + 5vh);
+}
+
+
+.resume .reproductor-container #video_container{
+    height: 100%;
+    width: 100%;
+}
+
+.resume .reproductor-container #video_container iframe{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.reproductor-container .dialog{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #000000d0;
+    z-index: 100;
+    display: grid;
+    place-items: center center;
+}
+
+.reproductor-container .dialog button{
+    height: auto;
+    width: auto;
+    padding: 10px 15px;
+    background-color: var(--accent-color);
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 0.25rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.reproductor-container .dialog button .icon{
+    padding-top: 0.25rem;
+}
+
+.reproductor-container .dialog button .icon svg{
+    height: 1.1rem;
+    width: 1.1rem;
+}
+
+
+.reproductor-container .dialog button:hover{
+    background-color: white;
+    color: var(--accent-color);
+}
