@@ -1,6 +1,5 @@
 <?php
-var_dump(BASE_DIR);
-var_dump(SRC_PATH);
+var_dump(file_exists('/app/src/env/env.php'));
 die();
 require_once SRC_PATH . 'env/env.php';
 class JwtHelper
