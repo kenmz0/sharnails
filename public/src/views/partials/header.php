@@ -11,7 +11,7 @@ require_once SRC_PATH . 'views/partials/SvgIcon.php';
 
 <header class="header">
     <h1 class="title-page"><?php echo $title_page ?></h1>
-    <img class="img-logo" src="/public/assets/img/logo_plain.webp" alt="Logo Sharnails">
+    <img class="img-logo" src="/assets/img/logo_plain.webp" alt="Logo Sharnails">
     <button class="button-menu-navegavion">
         <?= SvgIcon::render('menu', 25) ?>
     </button>
@@ -47,4 +47,4 @@ require_once SRC_PATH . 'views/partials/SvgIcon.php';
 <div class="header-backdrop">
     
 </div>
-<script src="/public/assets/scripts/header.effect.js"></script>
+<script src="/assets/scripts/header.effect.js"></script>
