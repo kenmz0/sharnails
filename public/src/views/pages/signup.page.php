@@ -4,7 +4,7 @@ require_once VIEWS_PATH . 'partials/head.php';
 
 <body>
     <?php require_once VIEWS_PATH . 'partials/header.php' ?>
-    <script src="/public/assets/scripts/signup.validation.form.js"></script>
+    <script src="/assets/scripts/signup.validation.form.js"></script>
     <main class="register-main">
         <section class="register-container">
             <h2>Crea tu cuenta</h2>
