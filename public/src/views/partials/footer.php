@@ -1,5 +1,5 @@
 <footer class="footer">
-    <img class="img-logo" src="/public/assets/img/logo_plain.webp" alt="Logo Sharnails">
+    <img class="img-logo" src="/assets/img/logo_plain.webp" alt="Logo Sharnails">
     <div class="redes-sociales">
         <ul>
             <li>
