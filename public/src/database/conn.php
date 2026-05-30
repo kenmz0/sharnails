@@ -1,5 +1,4 @@
 <?php
-require_once SRC_PATH . 'env/env.php';
 
 $host = getenv('DB_HOST');
 $db = getenv('DB_NAME');
