@@ -26,6 +26,9 @@ class CursoController
 
     public function curso($slug)
     {
+        
+var_dump(extension_loaded('pdo_pgsql'));
+var_dump(extension_loaded('pgsql'));
         $user_session = AuthServices::fastValidationSession();
         $clean_slug = trim((urldecode($slug)), '{}');
         $curso_info = CursoServices::getCursoBySlug($clean_slug);
