@@ -1,7 +1,4 @@
 <?php
-var_dump(file_exists('/app/src/env/env.php'));
-die();
-require_once SRC_PATH . 'env/env.php';
 class JwtHelper
 {
     private static $secret = null;
