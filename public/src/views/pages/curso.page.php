@@ -14,7 +14,7 @@
 function LinksCss(array $list_css)
 {
     foreach ($list_css as $file_css) {
-        echo '<link rel="stylesheet" href="/public/assets/css/' . $file_css . '">';
+        echo '<link rel="stylesheet" href="/assets/css/' . $file_css . '">';
     }
 }
 ?>
@@ -24,7 +24,7 @@ function LinksCss(array $list_css)
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" loading="lazy" href="/public/assets/img/favicon.webp" type="image/x-icon">
+    <link rel="shortcut icon" loading="lazy" href="/assets/img/favicon.webp" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.payphonetodoesposible.com/box/v2.0/payphone-payment-box.css">
     <?php LinksCss($list_css); ?>
     <script type="module" src="https://cdn.payphonetodoesposible.com/box/v2.0/payphone-payment-box.js"></script>
@@ -83,8 +83,8 @@ function LinksCss(array $list_css)
             <div id="pp-button"></div>
         </div>
     </main>
-    <script src="/public/assets/scripts/utils/payphone.modal.js"></script>
-    <script src="/public/assets/scripts/imagen.curso.js"></script>
+    <script src="/assets/scripts/utils/payphone.modal.js"></script>
+    <script src="/assets/scripts/imagen.curso.js"></script>
     <?= require_once VIEWS_PATH . 'partials/loader.php' ?>
     <?php require_once VIEWS_PATH . 'partials/footer.php' ?>
 </body>
