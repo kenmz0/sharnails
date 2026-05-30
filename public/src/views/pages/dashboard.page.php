@@ -16,7 +16,7 @@ require_once VIEWS_PATH . 'partials/SvgIcon.php'
             <div class="datos">
                 <div class="info-media">
                     <div class="avatar">
-                        <img class="logo" src="/public/assets/img/logo_plain.webp" alt="">
+                        <img class="logo" src="/assets/img/logo_plain.webp" alt="">
                         <!-- <?= SvgIcon::render('circle-user-round', 60) ?> -->
                     </div>
                     <div class="tag">
@@ -136,7 +136,7 @@ require_once VIEWS_PATH . 'partials/SvgIcon.php'
                                 <span class="descripcion">Completado</span>
                             </div>
                             <div class="portada">
-                                <img src="/public/assets/img/cursos/softgel.img.1.webp" alt="">
+                                <img src="/assets/img/cursos/softgel.img.1.webp" alt="">
                             </div>
                             <div class="card">
                                 <h2 class="curso-nombre">Taller de SoftGel</h2>
@@ -177,7 +177,7 @@ require_once VIEWS_PATH . 'partials/SvgIcon.php'
                                 <span class="descripcion">En curso</span>
                             </div>
                             <div class="portada">
-                                <img src="/public/assets/img/cursos/softgel.img.1.webp" alt="">
+                                <img src="/assets/img/cursos/softgel.img.1.webp" alt="">
                             </div>
                             <div class="card">
                                 <h2 class="curso-nombre">Taller de SoftGel</h2>
@@ -217,7 +217,7 @@ require_once VIEWS_PATH . 'partials/SvgIcon.php'
                                 <span class="descripcion">Incompleto</span>
                             </div>
                             <div class="portada">
-                                <img src="/public/assets/img/cursos/softgel.img.1.webp" alt="">
+                                <img src="/assets/img/cursos/softgel.img.1.webp" alt="">
                             </div>
                             <div class="card">
                                 <h2 class="curso-nombre">Taller de SoftGel</h2>
@@ -262,7 +262,7 @@ require_once VIEWS_PATH . 'partials/SvgIcon.php'
                                 <span class="descripcion">Certificado</span>
                             </div>
                             <div class="portada">
-                                <img src="/public/assets/img/cursos/softgel.img.1.webp" alt="">
+                                <img src="/assets/img/cursos/softgel.img.1.webp" alt="">
                             </div>
                             <div class="card">
                                 <h2 class="curso-nombre">Taller de SoftGel</h2>
