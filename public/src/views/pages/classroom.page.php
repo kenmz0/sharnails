@@ -26,7 +26,7 @@ require_once VIEWS_PATH . 'partials/SvgIcon.php'
                         </button>
                         <section class="menu_content">
                             <div class="portada">
-                                <img src="/public/assets/img/cursos/softgel.portada.webp" alt="">
+                                <img src="/assets/img/cursos/softgel.portada.webp" alt="">
                             </div>
                             <section class="progreso">
                                 <div class="tiempo">
@@ -190,8 +190,8 @@ require_once VIEWS_PATH . 'partials/SvgIcon.php'
             </section>
         </section>
     </main>
-    <script src="/public/assets/scripts/classroom.home.js"></script>
-    <script src="/public/assets/scripts/utils/htx.min.js"></script>
+    <script src="/assets/scripts/classroom.home.js"></script>
+    <script src="/assets/scripts/utils/htx.min.js"></script>
     <dialog class="dialog_pizarra" id="dialog_pizarra" style="display: none;">
         <button class="btn_cerrarModal" id="cerrarModal">
             <?= SvgIcon::render('x', 15) ?>
