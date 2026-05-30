@@ -7,11 +7,11 @@ require_once VIEWS_PATH . 'partials/head.php';
     <main class="home-main">
         <section class="poster main">
             <div class="background-item">
-                <img src="/public/assets/img/home-page-nail.webp" alt="uñas nails acrilicas">
-                <img src="/public/assets/img/home-page-nail-2.webp" alt="uñas nails acrilicas">
+                <img src="/assets/img/home-page-nail.webp" alt="uñas nails acrilicas">
+                <img src="/assets/img/home-page-nail-2.webp" alt="uñas nails acrilicas">
                 <!--  <div class="mask"></div> -->
             </div>
-            <img class="img-logo" src="/public/assets/img/logo_plain.webp" alt="Logo Sharnails">
+            <img class="img-logo" src="/assets/img/logo_plain.webp" alt="Logo Sharnails">
             <a class="href-cursos" data-destino="Cursos" href="/cursos">VER CURSOS</a>
             <div class="redes-sociales">
                 <ul>
@@ -50,7 +50,7 @@ require_once VIEWS_PATH . 'partials/head.php';
         </section>
         <section class="poster formacion">
             <div class="image">
-                <img loading="lazy" src="/public/assets/img/cursos/softgel.img.1.webp" alt="Curso nails experimentado">
+                <img loading="lazy" src="/assets/img/cursos/softgel.img.1.webp" alt="Curso nails experimentado">
             </div>
             <h2 class="title-poster">Formación Comprobada</h2>
             <div class="informacion">
@@ -93,13 +93,13 @@ require_once VIEWS_PATH . 'partials/head.php';
                 <a class="href-cursos" data-destino="Cursos" href="/cursos">VER CURSOS</a>
             </div>
             <div class="image">
-                <img loading="lazy" src="/public/assets/img/cursos/softgel.img.1.webp" alt="Curso nails experimentado">
+                <img loading="lazy" src="/assets/img/cursos/softgel.img.1.webp" alt="Curso nails experimentado">
             </div>
         </section>
         <section class="poster curso-reciente">
             <h2 class="title-poster">Mantente Actualizada</h2>
             <articule class="curso-card">
-                <div class="portada"> <img src="/public/assets/img/cursos/softgel.portada.webp"
+                <div class="portada"> <img src="/assets/img/cursos/softgel.portada.webp"
                         alt="Cartel Portada de Curso SoftGel"> </div>
                 <div class="informacion">
                     <h2 class="title-curso">SoftGel</h2>
