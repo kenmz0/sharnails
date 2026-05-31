@@ -1,2 +1,3 @@
 [php]
 extensions = ["pdo_pgsql", "pgsql"]
+ini-files = ["php.ini"]
