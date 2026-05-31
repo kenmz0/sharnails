@@ -1,4 +1,12 @@
 {
   "$schema": "https://schema.railpack.com",
-  "provider": "php"
+  "provider": "php",
+  "steps": {
+    "install": {
+      "commands": [
+        "...",
+        "install-php-extensions pdo_pgsql pgsql"
+      ]
+    }
+  }
 }
