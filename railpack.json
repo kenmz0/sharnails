@@ -1,7 +1,13 @@
 {
   "$schema": "https://schema.railpack.com",
   "provider": "php",
-  "php": {
-    "extensions": ["pdo_pgsql", "pgsql"]
+  "steps": {
+    "prepare": {
+      "commands": [
+        "apt-get update && apt-get install -y libpq-dev",
+        "docker-php-ext-install pdo pdo_pgsql pgsql"
+      ]
+    }
   }
 }
+
